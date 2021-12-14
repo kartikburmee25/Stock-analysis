@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stock summary: {{ company_name }}</title>
+</head>
+<body>
+<h1 style="text-align:center">Stock summary: {{ company_name }}</h1><br>
+<br>
+
+<br>
+<h2> Closing price </h2>
+<br>
+
+{{ closing_plot | safe }}
+
+<br>
+<h2> Simple Moving Average </h2>
+<br>
+
+{{ sma_10_plot | safe }}
+
+<br>
+
+<br>
+<h2> Exponential Moving Average </h2>
+<br>
+
+{{ EWM_plot | safe }}
+
+<br>
+
+<br>
+<h2> Stochastic Oscillator </h2>
+<br>
+
+{{ stochastic_plot | safe }}
+
+<br>
+
+<h2> Sustainability data </h2>
+<br>
+
+{{ info_div | linebreaks }}
+
+
+</body>
+</html>
